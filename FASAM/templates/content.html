@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if content.title == "Ana Sayfa" %}
+<div class="homepage">
+    <h1>FASAM</h1>
+    <p>{{ content.text }}</p>
+</div>
+{% else %}
+<div class="page-content">
+    <h1>{{ content.title }}</h1>
+    <p>{{ content.text }}</p>
+</div>
+{% endif %}
+{% endblock %}

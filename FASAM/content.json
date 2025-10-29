@@ -1,0 +1,35 @@
+{
+  "pages": [
+    {
+      "route": "index",
+      "title": "Ana Sayfa",
+      "text": "FASAM'a hoş geldiniz!"
+    },
+    {
+      "route": "about",
+      "title": "Hakkımızda",
+      "text": "hakımızda yazacaz."
+    },
+    {
+      "route": "project",
+      "title": "Proje Neden Seçildi",
+      "text": "orojeyi neden seçdik onu yazacaz."
+    },
+    {
+      "route": "images",
+      "title": "Resimler",
+      "images": ["resim1.jpg", "resim2.jpg"]
+    },
+    {
+      "route": "transportation",
+      "title": "Ulaşım Bilgileri",
+      "text": "Ulaşım bilgileri buraya yazacaz."
+    }
+    
+
+
+
+
+
+  ]
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>FASAM Web Site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <span id="toggle-btn">&#9776;</span>
+
+    <div class="sidebar">
+        <h2>Menü</h2>
+        <ul>
+            {% for p in pages %}
+            <li><a href="{{ '/' if p.route == 'index' else '/' + p.route }}">{{ p.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <script>
+    const toggleBtn = document.getElementById('toggle-btn');
+    const sidebar = document.querySelector('.sidebar');
+    const content = document.querySelector('.content');
+
+    toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        content.classList.toggle('active');
+    });
+    </script>
+</body>
+</html>

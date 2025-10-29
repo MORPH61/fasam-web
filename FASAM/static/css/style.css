@@ -1,0 +1,137 @@
+/* Genel Body */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    background-color: #D1DFBB; /* normal ten rengi */
+    color: #F0EBE5; /* tüm metinler */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #8d6e63;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: -220px;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #facc15;
+    background-color: #6d4c41;
+    margin-left: 5px;
+}
+
+/* İçerik */
+.content {
+    flex: 1;
+    padding: 60px 40px;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+/* Sayfa içeriklerini sağa kaydır */
+.page-content {
+    padding-left: 40px;
+}
+
+/* Hamburger */
+#toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1100;
+    color: #facc15;
+}
+
+/* Ana sayfa FASAM başlığı */
+.homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* ortalanmış */
+    height: 80vh;
+    text-align: center;
+}
+
+.homepage h1 {
+    color: #87575C; /* başlık rengi */
+    font-size: 120px; /* büyük ve orantılı */
+    font-weight: bold;
+    margin: 0;
+}
+
+.homepage p {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #F0EBE5; /* metin rengi */
+}
+
+/* Diğer sayfalar */
+.page-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #87575C; /* başlık rengi */
+}
+
+.page-content p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #F0EBE5; /* metin rengi */
+}
+
+/* Resim Galerisi */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.image-gallery img {
+    max-width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.7);
+}
